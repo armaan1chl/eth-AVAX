@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.0;
 
-contract AssertionExample {
+contract Module1 {
     function divide(uint256 _dividend, uint256 _divisor) external pure returns (uint256) {
         // require statement
         require(_divisor != 0, "Divisor cannot be zero.");
