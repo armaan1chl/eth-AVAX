@@ -1,10 +1,10 @@
 # eth-intermediate
 
-# AssertionExample Smart Contract
+# Module1 Smart Contract
 
 ## Overview
 
-The AssertionExample smart contract is a simple Solidity contract that demonstrates the use of require, assert, 
+The Module1 smart contract is a simple Solidity contract that demonstrates the use of require, assert, 
 and revert statements to ensure safe and predictable execution of the contract's functions. This contract specifically
 provides a function to perform division with several checks to handle potential errors or undesirable outcomes.
 
@@ -36,7 +36,7 @@ The contract is licensed under the GNU General Public License version 3.0, as in
 
 ## Usage
 
-1-Deploy the AssertionExample contract to an Ethereum network of your choice.
+1-Deploy the Module1 contract to an Ethereum network of your choice.
 
 2-Call the divide() function, providing the dividend and divisor as parameters.
 
