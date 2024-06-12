@@ -1,65 +1,42 @@
 # eth-intermediate
 
-# LocalStore Smart Contract
+# SimpleVoting Smart Contract
 
 ## Overview
 
-The LocalStore smart contract is a simple contract for managing a local store. 
-It allows the owner to add items, check the store's balance, 
-and demonstrates the use of Solidity's error handling mechanisms (require(), assert(), and revert()).
-
-## Prerequisites
-
--Solidity version 0.8.0 or higher.
--An Ethereum wallet/address for deploying the contract.
--A development environment like Remix, Truffle, or Hardhat for deploying and interacting with the contract.
+The SimpleVoting smart contract is a basic voting system that demonstrates the use of require(),
+assert(), and revert() statements in Solidity. The contract allows an owner to add eligible voters, 
+enables those voters to cast their votes, and provides a mechanism for the owner to reset the votes.
 
 ## SPDX License Identifier
 
 The contract is licensed under the GNU General Public License version 3.0, as indicated by the SPDX-License-Identifier: GPL-3.0 declaration.
 
+## Features
+
+1.Owner Management: Only the contract owner can add eligible voters and reset votes.
+
+2.Voting System: Eligible voters can cast their votes, ensuring each voter votes only once.
+
+3.Error Handling: Utilizes require(), assert(), and revert() to enforce rules and handle errors.
+
 ## Deployment
 
-To deploy the contract, the constructor requires no arguments, we manually sets the owner to a specific address (0xc9F915BDCcF5Ef9a06C61d544391BD81dc987862).
+To deploy the SimpleVoting contract:
 
-constructor() {
-    owner = 0xc9F915BDCcF5Ef9a06C61d544391BD81dc987862;
-}
+1.Use Remix or another Solidity-compatible development environment.
 
-Ensure that the provided address is correct before deploying.
+2.Compile the contract using Solidity version ^0.8.0.
+
+3.Deploy the contract to your desired Ethereum network.
 
 ## Usage
 
-## Contract Structure
+1-Add Eligible Voters: The owner calls addEligibleVoter with the address of each eligible voter.
 
--Item Struct: Represents an item in the store with id, name, price, and quantity.
--Mapping: Stores items with their id as the key.
--Owner: The address of the contract owner.
+2-Vote: Eligible voters call vote to cast their votes.
 
-## Functions
-
-1.addItem
-  -Description: Adds a new item to the store.
-  -Modifiers: onlyOwner
-
-2.checkStoreBalance
-
- -Description: Returns the balance of the store.
- -Modifiers: onlyOwner
- -Returns: The balance of the contract in wei.
-
-3.checkInvariant
-
- -Description: Demonstrates the use of the assert() function to check a contract invariant.
- -Modifiers: onlyOwner
-
-4.onlyOwnerCanDoThis
-
- -Description: Demonstrates the use of the revert() function to restrict access to the owner.
-
-## Modifiers
--onlyOwner
-  -Restricts the execution of the function to the owner of the contract.
+3-Reset Votes: The owner calls resetVotes to reset the voting system for a new round of voting.
 
 ## Authors
 
